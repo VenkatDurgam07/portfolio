@@ -1,0 +1,121 @@
+.leadership-header {
+    margin-bottom: var(--spacing-12);
+}
+
+.leadership-subtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-text-muted);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8);
+}
+
+.leadership-card {
+    display: flex;
+    gap: var(--spacing-6);
+    background: var(--color-bg-alt);
+    padding: var(--spacing-8);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-md);
+    border-left: 6px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.leadership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.leadership-primary {
+    border-left-color: var(--color-primary);
+}
+
+.leadership-secondary {
+    border-left-color: var(--color-teal);
+}
+
+.leadership-tertiary {
+    border-left-color: #8b5cf6;
+}
+
+.leadership-quaternary {
+    border-left-color: #f97316;
+}
+
+.leadership-primary .leadership-icon-wrapper {
+    background: #e0f2fe;
+    color: var(--color-primary);
+}
+
+.leadership-secondary .leadership-icon-wrapper {
+    background: #ccfbf1;
+    color: var(--color-teal);
+}
+
+.leadership-tertiary .leadership-icon-wrapper {
+    background: #ede9fe;
+    color: #8b5cf6;
+}
+
+.leadership-quaternary .leadership-icon-wrapper {
+    background: #ffedd5;
+    color: #f97316;
+}
+
+.leadership-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.leadership-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.leadership-duration {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-2);
+}
+
+.leadership-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-3);
+    font-weight: 700;
+}
+
+.leadership-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .leadership-card {
+        flex-direction: column;
+        padding: var(--spacing-6);
+    }
+}

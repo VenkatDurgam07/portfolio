@@ -1,0 +1,116 @@
+.bg-light {
+    background-color: var(--color-bg);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-6);
+}
+
+.highlight-card {
+    background: var(--color-bg-alt);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-8) var(--spacing-6);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.highlight-blue::before {
+    background-color: var(--color-primary);
+}
+
+.highlight-teal::before {
+    background-color: var(--color-teal);
+}
+
+.highlight-purple::before {
+    background-color: #8b5cf6;
+}
+
+.highlight-orange::before {
+    background-color: #f97316;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.highlight-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: var(--spacing-4);
+    background: var(--color-bg);
+}
+
+.highlight-blue .highlight-icon {
+    color: var(--color-primary);
+    background: #e0f2fe;
+}
+
+.highlight-teal .highlight-icon {
+    color: var(--color-teal);
+    background: #ccfbf1;
+}
+
+.highlight-purple .highlight-icon {
+    color: #8b5cf6;
+    background: #ede9fe;
+}
+
+.highlight-orange .highlight-icon {
+    color: #f97316;
+    background: #ffedd5;
+}
+
+.highlight-title {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.highlight-value {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-1);
+}
+
+.highlight-subtitle {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}
