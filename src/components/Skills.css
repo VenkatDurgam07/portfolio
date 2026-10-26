@@ -1,46 +1,89 @@
+.skills-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+
+.tech-skills-block {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-2xl);
+    padding: var(--spacing-8);
+    box-shadow: var(--shadow-sm);
+}
+
+.skills-heading-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-3);
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.skills-intro {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-6);
+}
+
 .skills-layout {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: var(--spacing-16);
+    gap: var(--spacing-12);
     align-items: flex-start;
 }
 
 .text-left {
     text-align: left;
-    margin-bottom: var(--spacing-8);
 }
 
 .skills-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-4);
+    gap: var(--spacing-3);
 }
 
 .skill-tag {
-    padding: var(--spacing-3) var(--spacing-6);
+    padding: var(--spacing-2) var(--spacing-5);
     background: white;
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-xl);
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--color-text);
     box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     cursor: default;
 }
 
 .skill-tag:hover {
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
     border-color: var(--color-primary);
     color: var(--color-primary-dark);
+}
+
+.skill-tag-tech {
+    background: var(--color-bg);
+    border-color: rgba(14, 165, 233, 0.25);
+    color: var(--color-text);
+}
+
+.skill-tag-tech:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-teal));
+    color: #ffffff;
+    border-color: transparent;
 }
 
 .languages-list {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-4);
+    margin-top: var(--spacing-6);
 }
 
 .language-item {
@@ -51,16 +94,17 @@
     background: white;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
     border-left: 4px solid var(--color-teal);
 }
 
 .language-name {
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .language-level {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--color-text-muted);
     font-weight: 500;
     background: var(--color-bg);
@@ -71,6 +115,10 @@
 @media (max-width: 900px) {
     .skills-layout {
         grid-template-columns: 1fr;
-        gap: var(--spacing-12);
+        gap: var(--spacing-10);
+    }
+
+    .tech-skills-block {
+        padding: var(--spacing-6);
     }
 }

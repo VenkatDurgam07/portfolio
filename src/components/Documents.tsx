@@ -36,9 +36,9 @@ const Documents: React.FC = () => {
     ];
 
     return (
-        <section className="section bg-light" id="documents">
+        <section className="section bg-white" id="documents">
             <div className="container">
-                <h2 className="section-title">Certifications & Documents</h2>
+                <h2 className="section-title">Official Documents & Records</h2>
 
                 <div className="documents-grid">
                     {docs.map((doc, idx) => (

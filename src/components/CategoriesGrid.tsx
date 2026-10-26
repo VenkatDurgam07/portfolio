@@ -1,19 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, HeartHandshake, Award, Shield, CheckCircle, MessageSquare, Lightbulb, UserCheck, Star } from 'lucide-react';
+import { Target, HeartHandshake, Award, Shield, GraduationCap, MessageSquare, Lightbulb, UserCheck, Star } from 'lucide-react';
 import './CategoriesGrid.css';
 
+interface CategoryItem {
+    title: string;
+    subtitle: string;
+    color: string;
+    icon: React.ReactNode;
+    isDark?: boolean;
+    link?: string;
+}
+
 const CategoriesGrid: React.FC = () => {
-    const categories = [
-        { title: 'Co-curricular Activities', subtitle: '(Sports)', color: 'var(--color-card-1)', icon: <Target size={36} /> },
-        { title: 'Community Service', subtitle: '& Volunteering', color: 'var(--color-card-2)', icon: <HeartHandshake size={36} /> },
-        { title: 'Leadership Roles', subtitle: '', color: 'var(--color-card-3)', icon: <Award size={36} /> },
-        { title: 'Work Experience', subtitle: '/ National Service', color: 'var(--color-card-4)', icon: <Shield size={36} /> },
-        { title: 'Personal Achievements', subtitle: '', color: 'var(--color-card-5)', icon: <CheckCircle size={36} /> },
-        { title: 'Testimonials', subtitle: '& Recommendations', color: 'var(--color-card-6)', icon: <MessageSquare size={36} /> },
-        { title: 'Initiative', subtitle: '& Contributions', color: 'var(--color-card-7)', icon: <Lightbulb size={36} /> },
-        { title: 'National Service Record', subtitle: '', color: 'var(--color-primary)', icon: <UserCheck size={36} color="white" />, isDark: true },
-        { title: 'Other Achievements', subtitle: '', color: 'var(--color-card-8)', icon: <Star size={36} /> }
+    const categories: CategoryItem[] = [
+        { title: 'Co-curricular Activities', subtitle: '(Sports)', color: 'var(--color-card-1)', icon: <Target size={36} />, link: '#extracurriculars' },
+        { title: 'Community Service', subtitle: '& Volunteering', color: 'var(--color-card-2)', icon: <HeartHandshake size={36} />, link: '#extracurriculars' },
+        { title: 'Leadership Roles', subtitle: '', color: 'var(--color-card-3)', icon: <Award size={36} />, link: '#leadership-roles' },
+        { title: 'Work Experience', subtitle: '/ National Service', color: 'var(--color-card-4)', icon: <Shield size={36} />, link: '#about' },
+        { title: 'Certificates & AI', subtitle: 'NUS Computing FSAI', color: 'var(--color-card-5)', icon: <GraduationCap size={36} />, link: '#certificates' },
+        { title: 'Testimonials', subtitle: '& Recommendations', color: 'var(--color-card-6)', icon: <MessageSquare size={36} />, link: '#documents' },
+        { title: 'Initiative', subtitle: '& Contributions', color: 'var(--color-card-7)', icon: <Lightbulb size={36} />, link: '#about' },
+        { title: 'National Service Record', subtitle: '', color: 'var(--color-primary)', icon: <UserCheck size={36} color="white" />, isDark: true, link: '#highlights' },
+        { title: 'Education Journey', subtitle: '', color: 'var(--color-card-8)', icon: <Star size={36} />, link: '#education' }
     ];
 
     return (
@@ -23,7 +32,7 @@ const CategoriesGrid: React.FC = () => {
                 <div className="categories-grid">
                     {categories.map((cat, idx) => (
                         <motion.a
-                            href={`#${cat.title.toLowerCase().replace(/\s+/g, '-')}`}
+                            href={cat.link || `#${cat.title.toLowerCase().replace(/\s+/g, '-')}`}
                             key={idx}
                             className="category-tile"
                             style={{ backgroundColor: cat.color, color: cat.isDark ? 'white' : 'var(--color-text)' }}

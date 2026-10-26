@@ -5,6 +5,7 @@ import Highlights from './components/Highlights';
 import CategoriesGrid from './components/CategoriesGrid';
 import Leadership from './components/Leadership';
 import Education from './components/Education';
+import Certificates from './components/Certificates';
 import Documents from './components/Documents';
 import Extracurriculars from './components/Extracurriculars';
 import Gallery from './components/Gallery';
@@ -22,6 +23,7 @@ function App() {
       <CategoriesGrid />
       <Leadership />
       <Education />
+      <Certificates />
       <Documents />
       <Extracurriculars />
       <Gallery />
