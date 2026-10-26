@@ -47,10 +47,10 @@ const Certificates: React.FC = () => {
     ];
 
     const programmeFeatures = [
-        { label: 'Faculty Instruction', detail: 'Pre-recorded video lectures from distinguished NUS Computing faculty' },
-        { label: 'Hands-on Labs', detail: 'Immersive coding lab exercises testing complex logic and implementation' },
-        { label: 'Capstone Project', detail: 'End-to-end full-stack web application integrating AI capabilities' },
-        { label: 'Peer Engagement', detail: 'Collaborative exchange of ideas and strategies with a dynamic tech cohort' }
+        { label: 'Faculty & Curriculum', detail: 'Curriculum & lectures designed by leading NUS Computing faculty, delivered via Emeritus' },
+        { label: 'Hands-on Labs', detail: 'Immersive coding lab exercises testing complex logic, data manipulation, and full-stack implementation' },
+        { label: 'Capstone Project', detail: 'Comprehensive end-to-end full-stack web application integrating AI capabilities' },
+        { label: 'Peer Collaboration', detail: 'Engaging peer cohort to exchange ideas, cutting-edge concepts, and practical strategies' }
     ];
 
     const techTags = [
@@ -121,7 +121,7 @@ const Certificates: React.FC = () => {
                     </motion.div>
                 </div>
 
-                {/* Featured Showcase: NUS Computing FSAI Programme */}
+                {/* Featured Showcase: Emeritus in partnership with NUS Computing FSAI Programme */}
                 <motion.div
                     className="featured-course-card"
                     initial={{ opacity: 0, y: 30 }}
@@ -150,13 +150,22 @@ const Certificates: React.FC = () => {
                                 </div>
                                 <div className="institution-info">
                                     <div className="institution-name">
-                                        National University of Singapore (NUS) • Computing
+                                        Emeritus in partnership with NUS Computing
                                     </div>
                                     <h3 className="course-title">
                                         Full Stack Development with AI Programme (FSAI)
                                     </h3>
                                     <p className="course-type">
-                                        Executive & Professional Technical Certification in Full Stack & Artificial Intelligence
+                                        Executive Technical Certification offered by{' '}
+                                        <a
+                                            href="https://emeritus.org/sg/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="partner-link"
+                                        >
+                                            Emeritus (emeritus.org/sg) <ExternalLink size={13} />
+                                        </a>{' '}
+                                        in partnership with the National University of Singapore (NUS) School of Computing
                                     </p>
                                 </div>
                             </div>
@@ -168,20 +177,20 @@ const Certificates: React.FC = () => {
                                 <Sparkles size={18} className="text-sky" /> Programme Overview
                             </h4>
                             <p className="overview-text">
-                                In this comprehensive programme, I am exploring the frontiers of modern web development—mastering
-                                both front-end and back-end technologies while gaining a deep understanding of Artificial
-                                Intelligence (AI) and its seamless integration into full-stack development. The curriculum empowers
-                                developers to streamline essential engineering tasks such as AI code generation, automated
-                                testing, and intelligent debugging, while enabling a sharp focus on complex architectural logic and
-                                creative problem-solving.
+                                In this comprehensive programme offered by <strong>Emeritus in partnership with NUS Computing</strong>,
+                                I am exploring the frontiers of modern web development—mastering both front-end and back-end
+                                technologies while gaining a deep understanding of Artificial Intelligence (AI) and its seamless
+                                integration into full-stack development. The curriculum empowers developers to streamline essential
+                                engineering tasks such as AI code generation, automated testing, and intelligent debugging, while
+                                enabling a sharp focus on complex architectural logic and creative problem-solving.
                             </p>
                             <p className="overview-text">
-                                Through an immersive learning experience that combines pre-recorded video lectures from leading NUS
-                                Computing faculty, hands-on lab exercises, and a capstone project, I am developing the expertise
-                                needed to build robust, scalable, and adaptable applications that satisfy modern user expectations.
-                                From client-side and server-side programming to crafting visually striking web applications, this
-                                programme equips developers to thrive in the fast-paced world of technology and harness AI to drive
-                                innovation and success.
+                                Through an immersive learning experience combining pre-recorded video lectures from leading NUS
+                                Computing faculty, hands-on lab exercises, and a capstone project delivered through the Emeritus
+                                learning platform, I am developing the expertise needed to build robust, scalable, and adaptable
+                                applications that satisfy rising user expectations. From client-side and server-side programming to
+                                crafting visually striking web applications, this programme prepares participants to thrive in the
+                                fast-paced world of technology and harness AI to drive innovation and success.
                             </p>
                         </div>
 
@@ -233,8 +242,8 @@ const Certificates: React.FC = () => {
                         {/* Quick Snapshot Footer */}
                         <div className="featured-card-footer">
                             <div className="footer-meta-item">
-                                <span className="meta-label">Issuing Body</span>
-                                <span className="meta-value">NUS Computing</span>
+                                <span className="meta-label">Delivered In Partnership</span>
+                                <span className="meta-value">Emeritus × NUS Computing</span>
                             </div>
                             <div className="footer-meta-item">
                                 <span className="meta-label">Schedule & Target</span>
@@ -243,8 +252,15 @@ const Certificates: React.FC = () => {
                                 </span>
                             </div>
                             <div className="footer-meta-item">
-                                <span className="meta-label">Project</span>
-                                <span className="meta-value">AI Full-Stack Capstone</span>
+                                <span className="meta-label">Official Portal</span>
+                                <a
+                                    href="https://emeritus.org/sg/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="meta-value text-link"
+                                >
+                                    emeritus.org/sg <ExternalLink size={13} />
+                                </a>
                             </div>
                             <div className="footer-meta-item">
                                 <span className="meta-label">Current Status</span>

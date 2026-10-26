@@ -40,7 +40,7 @@ const Skills: React.FC = () => {
         <section className="section bg-light" id="skills">
             <div className="container">
                 <div className="skills-main-wrapper">
-                    {/* Technical & AI Competencies (from NUS Computing FSAI) */}
+                    {/* Technical & AI Competencies (from Emeritus in partnership with NUS Computing FSAI) */}
                     <motion.div
                         className="tech-skills-block"
                         initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ const Skills: React.FC = () => {
                             <h2 className="section-title text-left mb-0">Technical & AI Competencies</h2>
                         </div>
                         <p className="skills-intro">
-                            Full-stack engineering, programming, and generative AI skill set developed through NUS Computing's FSAI Programme.
+                            Full-stack engineering, programming, and generative AI skill set developed through the Emeritus & NUS Computing FSAI Programme.
                         </p>
                         <div className="skills-tags tech-tags-special">
                             {techSkills.map((skill, idx) => (

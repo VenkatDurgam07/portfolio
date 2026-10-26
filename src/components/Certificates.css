@@ -175,6 +175,21 @@
     margin: 0;
 }
 
+.partner-link {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    transition: color 0.2s ease;
+}
+
+.partner-link:hover {
+    color: var(--color-teal-dark);
+}
+
 /* Programme Overview Box */
 .course-overview-box {
     background: var(--color-bg);
@@ -385,6 +400,21 @@
     gap: var(--spacing-1);
     color: #0284c7;
     font-weight: 800;
+}
+
+.meta-value.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.meta-value.text-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
 }
 
 .meta-badge-in-progress {

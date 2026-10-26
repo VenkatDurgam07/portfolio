@@ -18,7 +18,7 @@ const CategoriesGrid: React.FC = () => {
         { title: 'Community Service', subtitle: '& Volunteering', color: 'var(--color-card-2)', icon: <HeartHandshake size={36} />, link: '#extracurriculars' },
         { title: 'Leadership Roles', subtitle: '', color: 'var(--color-card-3)', icon: <Award size={36} />, link: '#leadership-roles' },
         { title: 'Work Experience', subtitle: '/ National Service', color: 'var(--color-card-4)', icon: <Shield size={36} />, link: '#about' },
-        { title: 'Certificates & AI', subtitle: 'NUS Computing FSAI', color: 'var(--color-card-5)', icon: <GraduationCap size={36} />, link: '#certificates' },
+        { title: 'Certificates & AI', subtitle: 'Emeritus × NUS Computing', color: 'var(--color-card-5)', icon: <GraduationCap size={36} />, link: '#certificates' },
         { title: 'Testimonials', subtitle: '& Recommendations', color: 'var(--color-card-6)', icon: <MessageSquare size={36} />, link: '#documents' },
         { title: 'Initiative', subtitle: '& Contributions', color: 'var(--color-card-7)', icon: <Lightbulb size={36} />, link: '#about' },
         { title: 'National Service Record', subtitle: '', color: 'var(--color-primary)', icon: <UserCheck size={36} color="white" />, isDark: true, link: '#highlights' },
